@@ -14,3 +14,12 @@ function getComputerChoice(compAns){
 }
 
 getComputerChoice(compAns);
+
+let humAns = prompt("rock, paper, or scissors?");
+
+let humanChoice = humAns.toLowerCase();
+
+console.log(humanChoice);
+
+
+
