@@ -22,19 +22,37 @@ console.log(getComputerChoice(compAns));
 // ask for human answer
 let humAns = prompt("rock, paper, or scissors?");
 
+// function getHumanChoice(){
+//     prompt("rock, paper, or scissors?");
+// }
+
+function getHumanChoice(humAns){
+    if (humAns == "rock") {
+        return "rock";
+    }
+    else if (humAns == "paper") {
+        return "paper";
+    }
+    else {
+        return "scissors";
+    }
+}
+
 // console.log(typeof(humAns)); // this is a string
 
+getHumanChoice(humAns);
+
 // display human answer
-console.log(humAns);
+console.log(getHumanChoice(humAns));
 
 
 // compare human answer to computer answer and display win or lose
-function playRound(humAns, getComputerChoice) {
-    if (humAns == "rock" &&  getComputerChoice(compAns) == "scissors") {
+function playRound() {
+    if (getHumanChoice(humAns) == "rock" &&  getComputerChoice(compAns) == "scissors") {
         console.log("You win!");
-    } else if (humAns == "paper" && getComputerChoice(compAns) == "rock") {
+    } else if (getHumanChoice(humAns) == "paper" && getComputerChoice(compAns) == "rock") {
         console.log("You win!!");
-    } else if (humAns == "scissors" && getComputerChoice(compAns) == "paper") {
+    } else if (getHumanChoice(humAns) == "scissors" && getComputerChoice(compAns) == "paper") {
         console.log("You win!!!");
     } else {
         console.log("You lose :(");
