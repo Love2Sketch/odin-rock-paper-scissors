@@ -40,22 +40,40 @@ let computerScore = 0;
 let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
 
-// compare for winnning conditions
+// compare for winnning conditions, increment scores
 function playRound(computerChoice, humanChoice){
     if (computerChoice == "scissors" && humanChoice == "rock") {
-            return "Rock smashes scissors. You won!";
+            ++humanScore;
+            console.log("Rock smashes scissors. You win!");
         }
         else if (computerChoice == "rock" && humanChoice == "paper") {
-            return "Paper covers rock. You won!";
+            ++humanScore;
+            console.log("Paper covers rock. You win!");
         }
         else if (computerChoice == "paper" && humanChoice == "scissors") {
-            return "Scissors cuts paper. You won!";
+            ++humanScore;
+            console.log("Scissors cuts paper. You win!");
+        }
+        else if (computerChoice == "rock" && humanChoice == "scissors") {
+            ++computerScore;
+            console.log("Rock smashes scissors. You lose:(");
+        }
+        else if (computerChoice == "paper" && humanChoice == "rock") {
+            ++computerScore;
+            console.log("Paper covers rock. You lose:(");
+        }
+        else if (computerChoice == "scissors" && humanChoice == "paper") {
+            ++computerScore;
+            console.log("Scissors cuts paper. You lose:(");
         }
         else {
-            return "You lost:(";
+            console.log("It's a tie!");
         }
 }
 
 // run and display results
 playRound(computerChoice, humanChoice);
-console.log(playRound(computerChoice, humanChoice));
+
+console.log(computerScore);
+console.log(humanScore);
+
