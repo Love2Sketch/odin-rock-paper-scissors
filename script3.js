@@ -75,6 +75,7 @@ let humanChoice = getHumanChoice();
         }
     console.log(computerScore);
     console.log(humanScore);
+
 }
 //round one
 playRound();
@@ -90,6 +91,16 @@ playRound();
 
 // round five
 playRound();
+
+    if (computerScore > humanScore) {
+        console.log("Computer Won the Game!");
+    }
+    else if (computerScore < humanScore) {
+        console.log("You Won the Game!");
+    }
+    else {
+        console.log("The Game was a Tie");
+    }
 
 }
 
